@@ -5,6 +5,475 @@
 /* Importar Google Fonts optimizadas */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* ========================================
+   MENSAJES ROMÁNTICOS FLOTANTES
+   ======================================== */
+.romantic-message {
+  position: fixed;
+  background: linear-gradient(135deg, rgba(216, 191, 216, 0.9), rgba(135, 206, 235, 0.9));
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  backdrop-filter: blur(15px);
+  z-index: 100;
+  transform: scale(0) translateY(20px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.romantic-message.show {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  animation: messageFloat 4s ease-in-out;
+}
+
+@keyframes messageFloat {
+  0%, 100% { transform: scale(1) translateY(0px) rotate(0deg); }
+  25% { transform: scale(1.02) translateY(-5px) rotate(0.5deg); }
+  50% { transform: scale(1) translateY(-3px) rotate(0deg); }
+  75% { transform: scale(1.01) translateY(-7px) rotate(-0.5deg); }
+}
+
+/* ========================================
+   EFECTOS DE PARALLAX
+   ======================================== */
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at 20% 80%, rgba(216, 191, 216, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(135, 206, 235, 0.1) 0%, transparent 50%);
+  z-index: -2;
+  will-change: transform;
+}
+
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.3) 2px, transparent 3px),
+    radial-gradient(circle at 60% 70%, rgba(216, 191, 216, 0.3) 1px, transparent 2px),
+    radial-gradient(circle at 80% 40%, rgba(135, 206, 235, 0.3) 2px, transparent 3px);
+  background-size: 200px 200px, 150px 150px, 180px 180px;
+  animation: floatBackground 20s linear infinite;
+  will-change: transform;
+}
+
+@keyframes floatBackground {
+  0% { background-position: 0% 0%, 0% 0%, 0% 0%; }
+  100% { background-position: 100% 100%, -100% 100%, 50% -100%; }
+}
+
+/* ========================================
+   PARTÍCULAS AVANZADAS
+   ======================================== */
+.advanced-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  animation: advancedFloat linear forwards;
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.5));
+}
+
+@keyframes advancedFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) rotate(36deg) scale(1);
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg) scale(1.1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10vh) rotate(324deg) scale(0.8);
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   MOUSE TRAIL ROMÁNTICO
+   ======================================== */
+.mouse-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99;
+  font-size: 14px;
+  animation: trailFade 0.8s ease-out forwards;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(180deg) translateY(-20px);
+  }
+}
+
+/* ========================================
+   EFECTOS DE BOTONES MEJORADOS
+   ======================================== */
+.button-sparkle {
+  position: absolute;
+  pointer-events: none;
+  font-size: 14px;
+  animation: enhancedSparkle 1.2s ease-out forwards;
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.8));
+}
+
+@keyframes enhancedSparkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.2) rotate(90deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(0.8) rotate(270deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateY(-30px);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   OVERLAY DE DEDICATORIA EN MODAL
+   ======================================== */
+.dedication-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10001;
+}
+
+.dedication-overlay.show {
+  opacity: 1;
+}
+
+.dedication-content {
+  position: relative;
+  background: linear-gradient(135deg, #D8BFD8, #87CEEB);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  margin: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+}
+
+.dedication-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.dedication-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.dedication-text {
+  margin-top: 10px;
+}
+
+.dedication-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.dedication-text audio {
+  margin: 15px auto;
+  border-radius: 25px;
+}
+
+/* ========================================
+   MEJORAS DE FLIP CARDS
+   ======================================== */
+.flip-card-front {
+  cursor: pointer;
+}
+
+.flip-card-front:hover .flip-card-indicator {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.flip-card-front img {
+  pointer-events: auto;
+}
+
+.flip-card-front img:hover + .flip-card-indicator {
+  opacity: 0;
+}
+
+/* ========================================
+   NOTIFICACIÓN DE REPRODUCTOR
+   ======================================== */
+.track-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #D8BFD8, #87CEEB);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.track-notification.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ========================================
+   MODAL DE IMAGEN EN PANTALLA COMPLETA
+   ======================================== */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-modal.show {
+  opacity: 1;
+}
+
+.image-modal.closing {
+  opacity: 0;
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+.modal-image:active {
+  cursor: grabbing;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.image-modal-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.image-modal-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.image-modal-controls button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.image-modal-controls button:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
+}
+
+/* ========================================
+   PARTÍCULAS DE CORAZONES
+   ======================================== */
+.heart-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  animation: heartFloat linear forwards;
+}
+
+@keyframes heartFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   EFECTOS DE BOTONES MEJORADOS
+   ======================================== */
+.button-sparkle {
+  position: absolute;
+  pointer-events: none;
+  font-size: 12px;
+  animation: sparkleFloat 1s ease-out forwards;
+}
+
+@keyframes sparkleFloat {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg) translateY(-20px);
+    opacity: 0;
+  }
+}
+
+.btn-romantic {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-romantic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-romantic:hover::before {
+  left: 100%;
+}
+
+/* ========================================
+   ANIMACIONES DE ENTRADA
+   ======================================== */
+.animate-in {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Animación de escritura para el título principal */
 @keyframes typing {
   from { width: 0; }

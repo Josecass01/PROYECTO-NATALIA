@@ -20,6 +20,9 @@
     <!-- Swiper CSS desde CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
 </head>
@@ -28,15 +31,22 @@
     <!-- Partículas flotantes (se generarán con JavaScript) -->
     <div id="particles-container"></div>
     
+    <!-- Mensajes románticos flotantes -->
+    <div id="romantic-messages"></div>
+    
+    <!-- Elementos de parallax -->
+    <div class="parallax-bg"></div>
+    <div class="floating-hearts parallax" data-speed="0.3"></div>
+    
     <!-- Header Principal -->
-    <header class="text-center py-12 px-4">
+    <header class="text-center py-12 px-4" data-aos="fade-down" data-aos-duration="1000">
         <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-soft-purple mb-4 typing-animation">
             Gracias por existir, Bobis
         </h1>
         <h2 class="font-display text-2xl md:text-4xl lg:text-5xl font-semibold text-serene-blue fade-in-up heartbeat">
             Feliz Cumpleaños, Corazón de Melón
         </h2>
-        <div class="mt-8 text-center">
+        <div class="mt-8 text-center" data-aos="zoom-in" data-aos-delay="500">
             <span class="inline-block text-6xl animate-bounce">🎂</span>
             <span class="inline-block text-6xl animate-pulse">💕</span>
             <span class="inline-block text-6xl animate-bounce">🎨</span>
@@ -44,14 +54,26 @@
     </header>
 
     <!-- Sección de Galería -->
-    <section id="gallery" class="py-16 px-4">
+    <section id="gallery" class="py-16 px-4" data-aos="fade-up" data-aos-duration="800">
         <div class="container mx-auto max-w-6xl">
-            <h3 class="font-display text-3xl md:text-4xl font-bold text-center text-soft-purple mb-12 fade-in-up">
-                Nuestros Momentos Especiales 📸
+            <h3 class="font-display text-3xl md:text-4xl font-bold text-center text-soft-purple mb-12 fade-in-up" data-aos="flip-up" data-aos-delay="200">
+                Hermosas Imagenes de una Increible Mujer 📸
             </h3>
             
+            <!-- Controles del Reproductor Global -->
+            <div class="text-center mb-8" data-aos="zoom-in" data-aos-delay="600">
+                <div class="inline-flex bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg">
+                    <button id="global-play" class="px-4 py-2 rounded-full bg-soft-purple text-white text-sm hover:bg-opacity-80 transition-all">
+                        ▶️ Reproducir Playlist
+                    </button>
+                    <button id="global-pause" class="px-4 py-2 rounded-full bg-gray-400 text-white text-sm ml-2 hover:bg-opacity-80 transition-all">
+                        ⏸️ Pausar Todo
+                    </button>
+                </div>
+            </div>
+            
             <!-- Swiper Container -->
-            <div class="swiper w-full h-[500px] md:h-[600px]">
+            <div class="swiper w-full h-[500px] md:h-[600px]" data-aos="fade-up" data-aos-delay="800">
                 <div class="swiper-wrapper">
                     
                     <!-- Tarjeta 1 -->
@@ -67,7 +89,7 @@
                                     <p class="text-lg md:text-xl text-center mb-6 font-medium">
                                         "El momento que captura la esencia de tu sonrisa, esa que ilumina todos mis días."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-sm" preload="metadata">
                                         <source src="./public/music/track1_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -382,6 +404,8 @@
     <!-- Scripts -->
     <!-- Swiper JS desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Script personalizado -->
     <script src="./script.js"></script>
 </body>
