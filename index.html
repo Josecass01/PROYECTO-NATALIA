@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Una página especial de cumpleaños para Natalia, llena de amor y recuerdos">
+    <meta name="author" content="Tu amor eterno">
+    <title>Feliz Cumpleaños, Mi Amor ❤️</title>
+    
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts optimizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS compilado -->
+    <link href="./styles.css" rel="stylesheet">
+    
+    <!-- Swiper CSS desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+</head>
+<body class="bg-gradient-to-br from-pastel-pink via-pearl-white to-serene-blue min-h-screen font-sans overflow-x-hidden">
+    
+    <!-- Partículas flotantes (se generarán con JavaScript) -->
+    <div id="particles-container"></div>
+    
+    <!-- Header Principal -->
+    <header class="text-center py-12 px-4">
+        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-soft-purple mb-4 typing-animation">
+            Gracias por existir, Bobis
+        </h1>
+        <h2 class="font-display text-2xl md:text-4xl lg:text-5xl font-semibold text-serene-blue fade-in-up heartbeat">
+            Feliz Cumpleaños, Corazón de Melón
+        </h2>
+        <div class="mt-8 text-center">
+            <span class="inline-block text-6xl animate-bounce">🎂</span>
+            <span class="inline-block text-6xl animate-pulse">💕</span>
+            <span class="inline-block text-6xl animate-bounce">🎨</span>
+        </div>
+    </header>
+
+    <!-- Sección de Galería -->
+    <section id="gallery" class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h3 class="font-display text-3xl md:text-4xl font-bold text-center text-soft-purple mb-12 fade-in-up">
+                Nuestros Momentos Especiales 📸
+            </h3>
+            
+            <!-- Swiper Container -->
+            <div class="swiper w-full h-[500px] md:h-[600px]">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Tarjeta 1 -->
+                    <div class="swiper-slide">
+                        <div class="flip-card w-full h-full">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front bg-white shadow-xl flex items-center justify-center">
+                                    <img src="./public/images/photo1_placeholder.jpg" 
+                                         alt="Momento especial 1" 
+                                         class="w-full h-full object-cover"
+                                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'800\' viewBox=\'0 0 800 800\'%3E%3Crect width=\'800\' height=\'800\' fill=\'%23FFC1CC\'/%3E%3Ctext x=\'400\' y=\'400\' font-family=\'Arial\' font-size=\'40\' fill=\'%23fff\' text-anchor=\'middle\' dy=\'0.3em\'%3EFoto 1%3C/text%3E%3C/svg%3E'">
+                                </div>
+                                <div class="flip-card-back bg-gradient-to-br from-soft-purple to-pastel-pink p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                        "Este momento captura la esencia de tu sonrisa, que ilumina cada día de mi vida."
+                                    </p>
+                                    <audio controls class="w-full max-w-sm">
+                                        <source src="./public/music/track1_placeholder.mp3" type="audio/mpeg">
+                                        Tu navegador no soporta audio HTML5.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="swiper-slide">
+                        <div class="flip-card w-full h-full">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front bg-white shadow-xl flex items-center justify-center">
+                                    <img src="./public/images/photo2_placeholder.jpg" 
+                                         alt="Momento especial 2" 
+                                         class="w-full h-full object-cover"
+                                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'800\' viewBox=\'0 0 800 800\'%3E%3Crect width=\'800\' height=\'800\' fill=\'%2387CEEB\'/%3E%3Ctext x=\'400\' y=\'400\' font-family=\'Arial\' font-size=\'40\' fill=\'%23fff\' text-anchor=\'middle\' dy=\'0.3em\'%3EFoto 2%3C/text%3E%3C/svg%3E'">
+                                </div>
+                                <div class="flip-card-back bg-gradient-to-br from-serene-blue to-light-gold p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                        "Tu pasión por el arte me inspira cada día. Cada trazo tuyo es perfección."
+                                    </p>
+                                    <audio controls class="w-full max-w-sm">
+                                        <source src="./public/music/track2_placeholder.mp3" type="audio/mpeg">
+                                        Tu navegador no soporta audio HTML5.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjetas 3-10 (estructura similar) -->
+                    <div class="swiper-slide">
+                        <div class="flip-card w-full h-full">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front bg-white shadow-xl flex items-center justify-center">
+                                    <img src="./public/images/photo3_placeholder.jpg" 
+                                         alt="Momento especial 3" 
+                                         class="w-full h-full object-cover"
+                                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'800\' viewBox=\'0 0 800 800\'%3E%3Crect width=\'800\' height=\'800\' fill=\'%23D8BFD8\'/%3E%3Ctext x=\'400\' y=\'400\' font-family=\'Arial\' font-size=\'40\' fill=\'%23fff\' text-anchor=\'middle\' dy=\'0.3em\'%3EFoto 3%3C/text%3E%3C/svg%3E'">
+                                </div>
+                                <div class="flip-card-back bg-gradient-to-br from-pastel-pink to-soft-purple p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                        "Contigo, cada momento se convierte en una obra de arte."
+                                    </p>
+                                    <audio controls class="w-full max-w-sm">
+                                        <source src="./public/music/track3_placeholder.mp3" type="audio/mpeg">
+                                        Tu navegador no soporta audio HTML5.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Más tarjetas... (por brevedad, incluyo solo las primeras 3, pero seguiría el mismo patrón) -->
+                    
+                </div>
+                
+                <!-- Navegación -->
+                <div class="swiper-button-next text-soft-purple"></div>
+                <div class="swiper-button-prev text-soft-purple"></div>
+                
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- Instrucciones -->
+            <p class="text-center mt-8 text-gray-600 font-medium">
+                💡 Haz clic en las tarjetas para descubrir sorpresas especiales
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección de Carta -->
+    <section id="letter" class="py-16 px-4 bg-gradient-to-r from-pearl-white to-pastel-pink">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h3 class="font-display text-3xl md:text-4xl font-bold text-soft-purple mb-8 fade-in-up">
+                Tengo algo especial para ti 💌
+            </h3>
+            <button id="open-letter-btn" class="btn-romantic bg-gradient-to-r from-soft-purple to-serene-blue text-white px-8 py-4 rounded-full text-xl font-semibold shadow-lg hover:shadow-xl">
+                Mi carta para ti
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal de la Carta -->
+    <div id="letter-modal" class="modal">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl p-8 mx-4">
+            <div class="text-right mb-4">
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">&times;</button>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <h4 class="font-display text-3xl md:text-4xl font-bold text-soft-purple text-center mb-8">
+                    Para mi Artista Favorita 🎨
+                </h4>
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-xl mb-6">Mi querida Natalia,</p>
+                    
+                    <p class="mb-6">
+                        Hoy celebramos no solo el día que llegaste a este mundo, sino también cada día que has llenado mi vida de color, 
+                        como solo tú sabes hacerlo con tus increíbles dibujos.
+                    </p>
+                    
+                    <p class="mb-6">
+                        Cada trazo que haces, cada sonrisa que dibujas, cada momento que compartimos, se convierte en mi obra de arte favorita. 
+                        Eres la inspiración que nunca sabía que necesitaba y el amor que siempre soñé encontrar.
+                    </p>
+                    
+                    <p class="mb-6">
+                        En este día especial, quiero que sepas que eres extraordinaria. Tu talento, tu dulzura, tu manera de ver el mundo 
+                        con esos ojos llenos de creatividad, hacen que cada día a tu lado sea una nueva aventura.
+                    </p>
+                    
+                    <p class="mb-6">
+                        Que este nuevo año de vida esté lleno de nuevos lienzos que pintar, nuevos sueños que cumplir, 
+                        y sobre todo, de todo el amor que mereces... que es infinito.
+                    </p>
+                    
+                    <p class="text-center text-xl font-semibold text-soft-purple">
+                        ¡Feliz cumpleaños, mi amor! 💕
+                    </p>
+                    
+                    <p class="text-right text-lg mt-8 font-medium">
+                        Con todo mi amor,<br>
+                        Tu admirador número 1 💖
+                    </p>
+                </div>
+                
+                <!-- Audio de fondo para la carta -->
+                <div class="text-center mt-8">
+                    <audio controls class="mx-auto">
+                        <source src="./public/music/main_song_placeholder.mp3" type="audio/mpeg">
+                        Tu navegador no soporta audio HTML5.
+                    </audio>
+                    <p class="text-sm text-gray-500 mt-2">🎵 Nuestra canción especial</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center bg-soft-purple text-white">
+        <p class="font-display text-xl">
+            Hecho con 💖 para la mujer más especial del mundo
+        </p>
+        <p class="text-sm mt-2 opacity-75">
+            Feliz cumpleaños, Natalia ✨
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Swiper JS desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="./script.js"></script>
+</body>
+</html>
