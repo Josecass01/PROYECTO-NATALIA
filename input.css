@@ -656,3 +656,124 @@ audio::-webkit-media-controls-pause-button {
 html {
   scroll-behavior: smooth;
 }
+
+/* ========================================
+   RESPONSIVE IMPROVEMENTS
+   ======================================== */
+
+/* Mejoras para dispositivos móviles pequeños */
+@media (max-width: 480px) {
+  .romantic-message {
+    max-width: 250px;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .typing-animation {
+    animation: typing 4s steps(25), blink-caret 0.75s step-end infinite;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  .parallax-bg,
+  .floating-hearts {
+    display: none;
+  }
+
+  /* Modal improvements for mobile */
+  .modal-content {
+    margin: 1rem !important;
+    padding: 1.5rem !important;
+    max-height: 92vh !important;
+    border-radius: 1rem !important;
+    max-width: 92vw !important;
+    min-height: 60vh !important;
+  }
+
+  /* Better flip card sizing */
+  .flip-card {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+
+  /* Swiper pagination more visible */
+  .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 6px !important;
+  }
+
+  /* Audio controls better sizing */
+  audio {
+    height: 35px !important;
+    max-width: 250px !important;
+  }
+}
+
+/* Optimizaciones para tabletas */
+@media (min-width: 481px) and (max-width: 768px) {
+  .romantic-message {
+    max-width: 280px;
+    font-size: 15px;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px !important;
+    height: 35px !important;
+  }
+}
+
+/* Mejoras para desktop */
+@media (min-width: 1024px) {
+  .romantic-message {
+    max-width: 350px;
+    font-size: 17px;
+  }
+}
+
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 1600px) {
+  .romantic-message {
+    max-width: 400px;
+    font-size: 18px;
+  }
+}
+
+/* Touch-friendly buttons para móviles */
+@media (max-width: 768px) {
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  audio {
+    height: 40px;
+  }
+}
+
+/* Prevent text selection on touch devices */
+@media (max-width: 768px) {
+  .flip-card-front img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Optimizar animaciones en dispositivos con menos rendimiento */
+@media (prefers-reduced-motion: reduce) {
+  .typing-animation,
+  .heartbeat,
+  .animate-bounce,
+  .animate-pulse {
+    animation: none;
+  }
+  
+  .romantic-message {
+    transition: opacity 0.3s ease;
+  }
+}

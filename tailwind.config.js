@@ -13,6 +13,14 @@ module.exports = {
         'sans': ['Poppins', 'sans-serif'],
         'display': ['Dancing Script', 'cursive'],
       },
+      screens: {
+        'xs': '475px',
+        '3xl': '1600px',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+      },
     },
   },
   plugins: [],

@@ -34,31 +34,51 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     function showRomanticMessage() {
+        // Reducir frecuencia en dispositivos móviles para mejor rendimiento
+        if (window.innerWidth < 768 && Math.random() < 0.3) return;
+        
         const container = document.getElementById('romantic-messages');
         const message = document.createElement('div');
         message.className = 'romantic-message';
         message.textContent = romanticMessages[Math.floor(Math.random() * romanticMessages.length)];
         
-        // Posición aleatoria
-        message.style.left = Math.random() * 80 + 10 + '%';
-        message.style.top = Math.random() * 60 + 20 + '%';
+        // Posición ajustada para diferentes tamaños de pantalla
+        let leftPos, topPos;
+        if (window.innerWidth < 768) {
+            // En móviles, posiciones más centradas para evitar interferir con el contenido
+            leftPos = Math.random() * 60 + 20; // 20% a 80%
+            topPos = Math.random() * 40 + 30; // 30% a 70%
+        } else {
+            // En desktop, posiciones más variadas
+            leftPos = Math.random() * 80 + 10; // 10% a 90%
+            topPos = Math.random() * 60 + 20; // 20% a 80%
+        }
+        
+        message.style.left = leftPos + '%';
+        message.style.top = topPos + '%';
+        
+        // Asegurar que no interfiera con elementos interactivos en móviles
+        message.style.pointerEvents = 'none';
+        message.style.zIndex = window.innerWidth < 768 ? '50' : '100';
         
         container.appendChild(message);
         
         // Animación de aparición
         setTimeout(() => message.classList.add('show'), 100);
         
-        // Remover después de 4 segundos
+        // Remover después de un tiempo ajustado según el dispositivo
+        const displayTime = window.innerWidth < 768 ? 3000 : 4000;
         setTimeout(() => {
             message.classList.remove('show');
             setTimeout(() => message.remove(), 500);
-        }, 4000);
+        }, displayTime);
     }
     
-    // Mostrar mensajes cada 8 segundos
-    setInterval(showRomanticMessage, 8000);
-    // Mostrar el primero inmediatamente
-    setTimeout(showRomanticMessage, 2000);
+    // Mostrar mensajes con frecuencia ajustada según el dispositivo
+    const messageInterval = window.innerWidth < 768 ? 12000 : 8000; // Menos frecuente en móviles
+    setInterval(showRomanticMessage, messageInterval);
+    // Mostrar el primero después de un delay inicial
+    setTimeout(showRomanticMessage, window.innerWidth < 768 ? 3000 : 2000);
 
     // ========================================
     // SISTEMA DE PLAYLIST AUTOMÁTICO
@@ -191,14 +211,56 @@ document.addEventListener('DOMContentLoaded', function() {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            dynamicBullets: true,
         },
-        // Configuración responsiva
+        // Configuración responsiva mejorada
         breakpoints: {
+            320: {
+                spaceBetween: 10,
+                centeredSlides: true,
+                slidesPerView: 1,
+            },
+            480: {
+                spaceBetween: 15,
+                centeredSlides: true,
+            },
             768: {
                 spaceBetween: 30,
+                centeredSlides: true,
             },
             1024: {
                 spaceBetween: 50,
+                centeredSlides: true,
+            }
+        },
+        // Ajustes para touch en móviles
+        touchRatio: 1,
+        touchAngle: 45,
+        touchReleaseOnEdges: true,
+        // Mejor rendimiento en móviles
+        freeMode: false,
+        freeModeSticky: true,
+        watchSlidesProgress: true,
+        // Personalización para dispositivos móviles
+        on: {
+            init: function() {
+                // Ocultar navegación en pantallas pequeñas
+                if (window.innerWidth < 768) {
+                    document.querySelector('.swiper-button-next').style.display = 'none';
+                    document.querySelector('.swiper-button-prev').style.display = 'none';
+                }
+            },
+            resize: function() {
+                // Mostrar/ocultar navegación según el tamaño de pantalla
+                const nextBtn = document.querySelector('.swiper-button-next');
+                const prevBtn = document.querySelector('.swiper-button-prev');
+                if (window.innerWidth < 768) {
+                    nextBtn.style.display = 'none';
+                    prevBtn.style.display = 'none';
+                } else {
+                    nextBtn.style.display = 'flex';
+                    prevBtn.style.display = 'flex';
+                }
             }
         }
     });
@@ -435,10 +497,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // GENERACIÓN DE PARTÍCULAS FLOTANTES
     // ========================================
     function createFloatingParticles() {
+        // Reducir partículas en dispositivos móviles para mejor rendimiento
+        if (window.innerWidth < 768 && (Math.random() < 0.7)) return;
+        
         const particlesContainer = document.getElementById('particles-container');
         const particles = ['💖', '💕', '🌸', '✨', '🎨', '🎂', '🌹', '💝', '🦋', '⭐'];
         
         function createParticle() {
+            // Limitar número de partículas en móviles
+            if (window.innerWidth < 768 && particlesContainer.children.length > 3) return;
+            if (window.innerWidth >= 768 && particlesContainer.children.length > 8) return;
+            
             const particle = document.createElement('div');
             particle.className = 'floating-particle';
             particle.textContent = particles[Math.floor(Math.random() * particles.length)];
@@ -446,34 +515,43 @@ document.addEventListener('DOMContentLoaded', function() {
             // Posición inicial aleatoria en el eje X
             particle.style.left = Math.random() * 100 + '%';
             
-            // Duración y retraso aleatorios para un efecto más natural
-            const duration = Math.random() * 3 + 7; // Entre 7 y 10 segundos
-            const delay = Math.random() * 2; // Hasta 2 segundos de retraso
+            // Duración ajustada según el dispositivo
+            const baseDuration = window.innerWidth < 768 ? 5 : 7; // Más rápido en móviles
+            const duration = Math.random() * 3 + baseDuration;
+            const delay = Math.random() * 2;
             
             particle.style.animationDuration = duration + 's';
             particle.style.animationDelay = delay + 's';
+            
+            // Añadir will-change para mejor rendimiento
+            particle.style.willChange = 'transform, opacity';
             
             particlesContainer.appendChild(particle);
             
             // Eliminar la partícula después de que termine la animación
             setTimeout(() => {
                 if (particle && particle.parentNode) {
+                    particle.style.willChange = 'auto'; // Limpiar will-change
                     particle.remove();
                 }
             }, (duration + delay) * 1000);
         }
         
-        // Crear partículas iniciales
-        for (let i = 0; i < 10; i++) {
+        // Crear partículas iniciales (menos en móviles)
+        const initialParticles = window.innerWidth < 768 ? 3 : 10;
+        for (let i = 0; i < initialParticles; i++) {
             setTimeout(createParticle, i * 500);
         }
         
-        // Crear nuevas partículas cada cierto tiempo
-        setInterval(createParticle, 2000);
+        // Crear nuevas partículas con intervalos ajustados
+        const particleInterval = window.innerWidth < 768 ? 4000 : 2000;
+        setInterval(createParticle, particleInterval);
     }
     
-    // Iniciar las partículas
-    createFloatingParticles();
+    // Iniciar las partículas solo si no es un dispositivo con preferencia por movimiento reducido
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        createFloatingParticles();
+    }
 
     // ========================================
     // ANIMACIONES DE ENTRADA
@@ -730,6 +808,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+
+    // ========================================
+    // RESPONSIVE RESIZE HANDLER
+    // ========================================
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        // Debounce para evitar múltiples ejecuciones
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            // Limpiar partículas excesivas si se redimensiona a móvil
+            const particlesContainer = document.getElementById('particles-container');
+            if (window.innerWidth < 768 && particlesContainer.children.length > 3) {
+                Array.from(particlesContainer.children).slice(3).forEach(particle => {
+                    particle.remove();
+                });
+            }
+            
+            // Ajustar altura del swiper según el nuevo tamaño
+            const swiperEl = document.querySelector('.swiper');
+            if (swiperEl) {
+                if (window.innerWidth < 480) {
+                    swiperEl.style.height = '350px';
+                } else if (window.innerWidth < 640) {
+                    swiperEl.style.height = '450px';
+                } else if (window.innerWidth < 768) {
+                    swiperEl.style.height = '500px';
+                } else if (window.innerWidth < 1024) {
+                    swiperEl.style.height = '600px';
+                } else {
+                    swiperEl.style.height = '650px';
+                }
+            }
+        }, 250);
     });
 
     // ========================================

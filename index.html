@@ -39,61 +39,61 @@
     <div class="floating-hearts parallax" data-speed="0.3"></div>
     
     <!-- Header Principal -->
-    <header class="text-center py-12 px-4" data-aos="fade-down" data-aos-duration="1000">
-        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-soft-purple mb-4 typing-animation">
+    <header class="text-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8" data-aos="fade-down" data-aos-duration="1000">
+        <h1 class="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-soft-purple mb-4 typing-animation leading-tight">
             Gracias por existir, Bobis
         </h1>
-        <h2 class="font-display text-2xl md:text-4xl lg:text-5xl font-semibold text-serene-blue fade-in-up heartbeat">
+        <h2 class="font-display text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-serene-blue fade-in-up heartbeat leading-tight">
             Feliz Cumpleaños, Corazón de Melón
         </h2>
-        <div class="mt-8 text-center" data-aos="zoom-in" data-aos-delay="500">
-            <span class="inline-block text-6xl animate-bounce">🎂</span>
-            <span class="inline-block text-6xl animate-pulse">💕</span>
-            <span class="inline-block text-6xl animate-bounce">🎨</span>
+        <div class="mt-6 sm:mt-8 text-center" data-aos="zoom-in" data-aos-delay="500">
+            <span class="inline-block text-4xl sm:text-5xl md:text-6xl animate-bounce">🎂</span>
+            <span class="inline-block text-4xl sm:text-5xl md:text-6xl animate-pulse">💕</span>
+            <span class="inline-block text-4xl sm:text-5xl md:text-6xl animate-bounce">🎨</span>
         </div>
     </header>
 
     <!-- Sección de Galería -->
-    <section id="gallery" class="py-16 px-4" data-aos="fade-up" data-aos-duration="800">
+    <section id="gallery" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="800">
         <div class="container mx-auto max-w-6xl">
-            <h3 class="font-display text-3xl md:text-4xl font-bold text-center text-soft-purple mb-12 fade-in-up" data-aos="flip-up" data-aos-delay="200">
+            <h3 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-soft-purple mb-8 sm:mb-12 fade-in-up" data-aos="flip-up" data-aos-delay="200">
                 Hermosas Imagenes de una Increible Mujer 📸
             </h3>
             
             <!-- Controles del Reproductor Global -->
-            <div class="text-center mb-8" data-aos="zoom-in" data-aos-delay="600">
-                <div class="inline-flex bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg">
-                    <button id="global-play" class="px-4 py-2 rounded-full bg-soft-purple text-white text-sm hover:bg-opacity-80 transition-all">
-                        ▶️ Reproducir Playlist
+            <div class="text-center mb-6 sm:mb-8" data-aos="zoom-in" data-aos-delay="600">
+                <div class="inline-flex bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg flex-wrap gap-2">
+                    <button id="global-play" class="px-3 sm:px-4 py-2 rounded-full bg-soft-purple text-white text-xs sm:text-sm hover:bg-opacity-80 transition-all">
+                        ▶️ <span class="hidden sm:inline">Reproducir Playlist</span><span class="sm:hidden">Play</span>
                     </button>
-                    <button id="global-pause" class="px-4 py-2 rounded-full bg-gray-400 text-white text-sm ml-2 hover:bg-opacity-80 transition-all">
-                        ⏸️ Pausar Todo
+                    <button id="global-pause" class="px-3 sm:px-4 py-2 rounded-full bg-gray-400 text-white text-xs sm:text-sm hover:bg-opacity-80 transition-all">
+                        ⏸️ <span class="hidden sm:inline">Pausar Todo</span><span class="sm:hidden">Pause</span>
                     </button>
                 </div>
             </div>
             
             <!-- Swiper Container -->
-            <div class="swiper w-full h-[500px] md:h-[600px]" data-aos="fade-up" data-aos-delay="800">
+            <div class="swiper w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]" data-aos="fade-up" data-aos-delay="800">
                 <div class="swiper-wrapper">
                     
                     <!-- Tarjeta 1 -->
                     <div class="swiper-slide">
                         <div class="flip-card w-full h-full">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front bg-white shadow-xl flex items-center justify-center">
+                                <div class="flip-card-front bg-white shadow-lg sm:shadow-xl flex items-center justify-center rounded-lg sm:rounded-xl overflow-hidden">
                                     <img src="./public/images/photo1_placeholder.jpg" 
                                          alt="Momento especial 1" 
                                          class="w-full h-full object-cover">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-soft-purple to-pastel-pink p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-soft-purple to-pastel-pink p-3 sm:p-4 lg:p-6 flex flex-col justify-center items-center text-white rounded-lg sm:rounded-xl">
+                                    <p class="text-xs sm:text-sm md:text-lg lg:text-xl text-center mb-3 sm:mb-4 lg:mb-6 font-medium leading-relaxed px-2">
                                         "El momento que captura la esencia de tu sonrisa, esa que ilumina todos mis días."
                                     </p>
-                                    <audio controls class="w-full max-w-sm" preload="metadata">
+                                    <audio controls class="w-full max-w-[250px] sm:max-w-xs lg:max-w-sm" preload="metadata">
                                         <source src="./public/music/track1_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
-                                    <p class="text-xs text-center mt-2 opacity-75">🎵 "Until I Found You" - Stephen Sanchez</p>
+                                    <p class="text-xs text-center mt-1 sm:mt-2 opacity-75">🎵 "Until I Found You" - Stephen Sanchez</p>
                                 </div>
                             </div>
                         </div>
@@ -108,11 +108,11 @@
                                      alt="Momento especial 2" 
                                      class="w-full h-full object-contain">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-serene-blue to-light-gold p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-serene-blue to-light-gold p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Tu pasión por el arte me inspira cada día. Eres mi artista favorita del mundo."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track2_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -131,11 +131,11 @@
                                          alt="Momento especial 3" 
                                          class="w-full h-full object-cover">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-pastel-pink to-soft-purple p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-pastel-pink to-soft-purple p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Contigo, cada momento se convierte en una obra de arte."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track3_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -154,11 +154,11 @@
                                          alt="Momento especial 4" 
                                          class="w-full h-full object-cover">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-light-gold to-pastel-pink p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-light-gold to-pastel-pink p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Tu risa es la melodía más hermosa que he escuchado jamás."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track4_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -178,11 +178,11 @@
                                          class="w-full h-full object-cover"
                                          style="transform: scale(1.15); object-position: center;">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-serene-blue to-soft-purple p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-serene-blue to-soft-purple p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "En tus ojos veo mi hogar, mi paz, mi futuro."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track5_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -201,11 +201,11 @@
                                      alt="Momento especial 6" 
                                      class="w-full h-full object-contain">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-pastel-pink to-light-gold p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-pastel-pink to-light-gold p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Cada día a tu lado es una nueva página de nuestra historia de amor."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track6_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -224,11 +224,11 @@
                                      alt="Momento especial 7" 
                                      class="w-full h-full object-contain">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-soft-purple to-serene-blue p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-soft-purple to-serene-blue p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Tu creatividad me enseña a ver la belleza en cada detalle."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track7_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -247,11 +247,11 @@
                                      alt="Momento especial 8" 
                                      class="w-full h-full object-contain">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-light-gold to-serene-blue p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-light-gold to-serene-blue p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Contigo aprendí que el amor verdadero existe y es hermoso."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track8_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -270,11 +270,11 @@
                                      alt="Momento especial 9" 
                                      class="w-full h-full object-contain">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-pastel-pink to-soft-purple p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-pastel-pink to-soft-purple p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Eres mi inspiración diaria, mi musa, mi razón de sonreír."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track9_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -293,11 +293,11 @@
                                      alt="Momento especial 10" 
                                      class="w-full h-full object-contain">
                                 </div>
-                                <div class="flip-card-back bg-gradient-to-br from-serene-blue to-light-gold p-6 flex flex-col justify-center items-center text-white">
-                                    <p class="text-lg md:text-xl text-center mb-6 font-medium">
+                                <div class="flip-card-back bg-gradient-to-br from-serene-blue to-light-gold p-4 sm:p-6 flex flex-col justify-center items-center text-white">
+                                    <p class="text-sm sm:text-lg md:text-xl text-center mb-4 sm:mb-6 font-medium leading-relaxed">
                                         "Gracias por llenar mi mundo de colores que nunca imaginé."
                                     </p>
-                                    <audio controls class="w-full max-w-sm">
+                                    <audio controls class="w-full max-w-xs sm:max-w-sm">
                                         <source src="./public/music/track10_placeholder.mp3" type="audio/mpeg">
                                         Tu navegador no soporta audio HTML5.
                                     </audio>
@@ -318,19 +318,19 @@
             </div>
             
             <!-- Instrucciones -->
-            <p class="text-center mt-8 text-gray-600 font-medium">
+            <p class="text-center mt-6 sm:mt-8 text-gray-600 font-medium text-sm sm:text-base px-4">
                 💡 Haz clic en las tarjetas para descubrir sorpresas especiales
             </p>
         </div>
     </section>
 
     <!-- Sección de Carta -->
-    <section id="letter" class="py-16 px-4 bg-gradient-to-r from-pearl-white to-pastel-pink">
+    <section id="letter" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pearl-white to-pastel-pink">
         <div class="container mx-auto max-w-4xl text-center">
-            <h3 class="font-display text-3xl md:text-4xl font-bold text-soft-purple mb-8 fade-in-up">
+            <h3 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-soft-purple mb-6 sm:mb-8 fade-in-up leading-tight">
                 Tengo algo especial para ti 💌
             </h3>
-            <button id="open-letter-btn" class="btn-romantic bg-gradient-to-r from-soft-purple to-serene-blue text-white px-8 py-4 rounded-full text-xl font-semibold shadow-lg hover:shadow-xl">
+            <button id="open-letter-btn" class="btn-romantic bg-gradient-to-r from-soft-purple to-serene-blue text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold shadow-lg hover:shadow-xl transition-all">
                 Mi carta para ti
             </button>
         </div>
@@ -338,65 +338,65 @@
 
     <!-- Modal de la Carta -->
     <div id="letter-modal" class="modal">
-        <div class="modal-content bg-white rounded-2xl shadow-2xl p-8 mx-4">
-            <div class="text-right mb-4">
-                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">&times;</button>
+        <div class="modal-content bg-white rounded-lg sm:rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-10 mx-4 sm:mx-6 lg:mx-auto max-w-[92vw] sm:max-w-4xl lg:max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="text-right mb-3 sm:mb-4">
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-700 text-2xl sm:text-3xl font-bold min-w-[44px] min-h-[44px] flex items-center justify-center ml-auto">&times;</button>
             </div>
-            <div class="max-w-2xl mx-auto">
-                <h4 class="font-display text-3xl md:text-4xl font-bold text-soft-purple text-center mb-8">
+            <div class="w-full">
+                <h4 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-soft-purple text-center mb-4 sm:mb-6 lg:mb-8 leading-tight">
                     Para mi Artista Favorita 🎨
                 </h4>
-                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-xl mb-6">Mi querida Natalia,</p>
+                <div class="prose prose-base sm:prose-lg lg:prose-lg max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg sm:text-xl mb-4 sm:mb-6 font-medium">Mi querida Natalia,</p>
                     
-                    <p class="mb-6">
+                    <p class="mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
                         Hoy celebramos no solo el día que llegaste a este mundo, sino también cada día que has llenado mi vida de color, 
                         como solo tú sabes hacerlo con tus increíbles dibujos.
                     </p>
                     
-                    <p class="mb-6">
+                    <p class="mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
                         Cada trazo que haces, cada sonrisa que dibujas, cada momento que compartimos, se convierte en mi obra de arte favorita. 
                         Eres la inspiración que nunca sabía que necesitaba y el amor que siempre soñé encontrar.
                     </p>
                     
-                    <p class="mb-6">
+                    <p class="mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
                         En este día especial, quiero que sepas que eres extraordinaria. Tu talento, tu dulzura, tu manera de ver el mundo 
                         con esos ojos llenos de creatividad, hacen que cada día a tu lado sea una nueva aventura.
                     </p>
                     
-                    <p class="mb-6">
+                    <p class="mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
                         Que este nuevo año de vida esté lleno de nuevos lienzos que pintar, nuevos sueños que cumplir, 
                         y sobre todo, de todo el amor que mereces... que es infinito.
                     </p>
                     
-                    <p class="text-center text-xl font-semibold text-soft-purple">
+                    <p class="text-center text-lg sm:text-xl font-semibold text-soft-purple mb-4 sm:mb-6">
                         ¡Feliz cumpleaños, mi amor! 💕
                     </p>
                     
-                    <p class="text-right text-lg mt-8 font-medium">
+                    <p class="text-right text-base sm:text-lg font-medium mt-6 sm:mt-8">
                         Con todo mi amor,<br>
                         Jose Castellanos 💖
                     </p>
                 </div>
                 
                 <!-- Audio de fondo para la carta -->
-                <div class="text-center mt-8">
-                    <audio controls class="mx-auto">
+                <div class="text-center mt-4 sm:mt-6 px-2">
+                    <audio controls class="mx-auto w-full max-w-[280px] sm:max-w-xs">
                         <source src="./public/music/main_song_placeholder.mp3" type="audio/mpeg">
                         Tu navegador no soporta audio HTML5.
                     </audio>
-                    <p class="text-sm text-gray-500 mt-2">🎵 "Eres tú" - Carla Morrison</p>
+                    <p class="text-xs text-gray-500 mt-1 sm:mt-2">🎵 "Eres tú" - Carla Morrison</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="py-8 text-center bg-soft-purple text-white">
-        <p class="font-display text-xl">
+    <footer class="py-6 sm:py-8 text-center bg-soft-purple text-white px-4">
+        <p class="font-display text-lg sm:text-xl leading-tight">
             Hecho con mucho amor para la mujer más especial del mundo
         </p>
-        <p class="text-sm mt-2 opacity-75">
+        <p class="text-xs sm:text-sm mt-2 opacity-75">
             Feliz cumpleaños, mi vida  ✨
         </p>
     </footer>

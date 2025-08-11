@@ -1,23 +1,52 @@
 # Feliz Cumpleaños, Mi Amor ❤️
 
-Una página web especial de cumpleaños para Natalia, creada con amor y optimizada para el máximo rendimiento. Diseñada para celebrar su pasión por el arte y nuestros momentos especiales juntos.
+Una página web especial de cumpleaños para Natalia, creada con amor y completamente responsive. Diseñada para celebrar su pasión por el arte y nuestros momentos especiales juntos, optimizada para una experiencia perfecta en todos los dispositivos.
 
 ## ✨ Características
 
 - 🎨 **Diseño Artístico**: Inspirado en la pasión de Natalia por el dibujo
 - 💕 **Temática Romántica**: Colores suaves y animaciones encantadoras
-- 📱 **Completamente Responsivo**: Optimizado para todos los dispositivos
-- ⚡ **Alto Rendimiento**: CSS y JS combinados < 75KB
-- 🎵 **Experiencia Multimedia**: Galería interactiva con audio
+- 📱 **Completamente Responsivo**: Optimizado para móviles, tabletas y desktop
+- ⚡ **Alto Rendimiento**: CSS y JS optimizados con lazy loading
+- 🎵 **Experiencia Multimedia**: Galería interactiva con audio adaptativo
 - 🎭 **Animaciones Fluidas**: Efectos CSS optimizados para 60fps
+- 🔧 **UX Adaptativa**: Interfaz que se ajusta inteligentemente al dispositivo
+
+## 📱 Responsive Design
+
+### 🔍 Breakpoints Optimizados
+- **Mobile**: < 768px (iPhone, Android)
+- **Tablet**: 768px - 1023px (iPad, tabletas)
+- **Desktop**: ≥ 1024px (computadoras)
+- **Large Desktop**: ≥ 1600px (pantallas grandes)
+
+### 🎯 Adaptaciones por Dispositivo
+
+#### 📱 Móviles
+- Tipografías escaladas dinámicamente (sm:text-xl md:text-4xl lg:text-6xl)
+- Navegación simplificada del carrusel (solo paginación)
+- Controles touch-friendly (mínimo 44px)
+- Partículas y animaciones optimizadas para rendimiento
+- Espaciado adaptativo y márgenes responsivos
+
+#### 📊 Tabletas
+- Controles de navegación de tamaño intermedio
+- Espaciado equilibrado entre móvil y desktop
+- Mantenimiento de efectos visuales principales
+
+#### 🖥️ Desktop
+- Experiencia completa con todos los efectos
+- Navegación completa del carrusel
+- Densidad máxima de partículas y animaciones
 
 ## 🛠️ Stack Tecnológico
 
 - **HTML5**: Estructura semántica y accesible
-- **Tailwind CSS**: Framework CSS instalado localmente
-- **JavaScript ES6+**: Interactividad moderna y optimizada
-- **Swiper.js**: Carrusel de galería profesional
+- **Tailwind CSS**: Framework CSS con configuración responsive personalizada
+- **JavaScript ES6+**: Interactividad moderna con optimizaciones para móviles
+- **Swiper.js**: Carrusel con configuración responsive avanzada
 - **Google Fonts**: Typography premium (Dancing Script + Poppins)
+- **AOS Library**: Animaciones al scroll con detección de dispositivo
 
 ## 🚀 Instalación y Uso
 
