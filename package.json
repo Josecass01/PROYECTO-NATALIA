@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "npx tailwindcss -i ./input.css -o ./styles.css --watch",
-    "build": "npx -y tailwindcss -i ./input.css -o ./styles.css --minify"
+    "build": "echo 'No build needed - using pre-compiled CSS'"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "tailwindcss": "^3.4.17"
+    "aos": "^2.3.4"
   }
 }
